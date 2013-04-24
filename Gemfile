@@ -2,13 +2,13 @@ source 'https://rubygems.org'
 
 gem 'jquery-rails'
 gem 'rails', '3.2.13'
-
-group :production do
-	gem 'pg'
+group :development, :test do
+    gem 'sqlite3'
 end
 
-group :devolopment, :test do
- gem 'sqlite3'
+group :production do
+        gem 'thin'
+    gem 'pg'
 end
 
 group :assets do
